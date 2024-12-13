@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Task Management App",
+            "shortDesc": "A secure React-Node.js task app for adding, editing, and managing tasks with a dashboard and authentication.",
+            "github": {
+                "backend": "https://github.com/varunvatsal/task-management-app-backend",
+                "frontend": "https://github.com/varunvatsal/task-management-app-frontend"
+            },
+            "deployedAt": "vercel",
+            "website": "https://task-management-app-frontend-five.vercel.app/",
+            "description": "The Task Management App is a comprehensive application that allows users to register, log in, and manage their tasks effectively. Users can add tasks by specifying details such as title, start time, end time, priority, and status, and can view a list of all tasks along with a dashboard displaying task-related statistics. The app also provides features to edit or delete tasks, ensuring flexibility and control. The frontend is built using React, leveraging features like React Routing, Context API, and hooks such as useEffect, useState, and useNavigate for seamless navigation and state management. The backend is powered by Node.js and Express, with endpoints designed for CRUD operations on tasks and user authentication. Security is a key focus, with JWT used for authentication and passwords stored in an encrypted format. Additionally, the app includes strict error handling and implements CORS to ensure smooth and secure communication between the frontend and backend. This application delivers a user-friendly and secure solution for efficient task management."
+        },
+        {
+            "id": 2,
+            "name": "Product Catalog",
+            "shortDesc": "A React-based app to browse, filter, and manage products, with search, add-to-cart, and detailed product views.",
+            "github": {
+                "frontend": "https://github.com/varunvatsal/Meraken-Product-Catalog",
+                "backend": ""
+            },
+            "website": "https://meraken-product-catalog.vercel.app/",
+            "deployedAt": "vercel",
+            "description": "The Product Catalog App is a dynamic and user-friendly application designed to browse and manage products seamlessly. Built using React, the app fetches product information via an API call and displays all products on the homepage. Users can easily filter products based on categories or search for specific items using the implemented search functionality. The app also features an Add to cart function, allowing users to select products and view their chosen items on a dedicated cart page, made possible through React Router for smooth navigation. Additionally, detailed product information is accessible on a separate page for an in-depth view of each item. This app provides an intuitive interface and efficient navigation, making product browsing and management straightforward and engaging."
+        },
+        {
+            "id": 3,
+            "name": "Random Password Generator",
+            "shortDesc": "A simple React app to generate secure, customizable passwords with options to adjust length and include/exclude numbers or special characters.",
+            "github": {
+                "frontend": "https://github.com/varunvatsal/passwordGenerator",
+                "backend": ""
+            },
+            "deployedAt": "vercel",
+            "website": "https://password-generator-blond-rho-43.vercel.app/",
+            "description": "The Random Password Generator is a simple and intuitive frontend web application designed to create secure and customizable passwords. Users can generate random passwords with adjustable length and have the option to include or exclude numbers and special characters based on their preferences. The user-friendly interface allows seamless customization, ensuring the generated passwords meet specific security requirements or personal needs. This lightweight app is perfect for anyone looking to create strong and secure passwords quickly and effortlessly."
+        }
+    ]
+}
