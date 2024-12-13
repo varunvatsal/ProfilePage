@@ -6,7 +6,7 @@ const Home = () => {
     <div className={styles.profileContainer}>
       <div className={styles.header}>
         <img
-          src="../../images/Varun Vatsal.jpg"
+          src="https://raw.githubusercontent.com/varunvatsal/ProfilePage/refs/heads/main/images/Varun%20Vatsal.jpg"
           alt="Profile Picture"
           className={styles.profilePicture}
         />
