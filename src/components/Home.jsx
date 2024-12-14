@@ -35,6 +35,7 @@ const Home = () => {
           <li>React.js</li>
           <li>Node.js</li>
           <li>Javascript</li>
+          <li>SQL</li>
           <li>Java</li>
           <li>Spring Boot</li>
           <li>Spring</li>
