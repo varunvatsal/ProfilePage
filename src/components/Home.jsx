@@ -40,7 +40,7 @@ const Home = () => {
         <div className={styles.profileContainer}>
           <div className={styles.profileImageContainer}>
             <animated.img
-              src="../../images/WhatsApp Image 2025-01-01 at 3.18.21 PM.jpeg"
+              src="https://raw.githubusercontent.com/varunvatsal/ProfilePage/refs/heads/main/images/WhatsApp%20Image%202025-01-01%20at%203.18.21%20PM.jpeg"
               alt="Profile"
               className={styles.profileImage}
               style={{...profileImageSpring, transformOrigin: "center"}}
