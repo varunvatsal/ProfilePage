@@ -86,5 +86,25 @@
   align-items: center;
 }
 
+.skillContainer {
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
 
+.skillContainer {
+  align-items: center;
+}
+
+.skillUnorderedList {
+  width: 25%;
+  text-align: left;
+  display: inline-block;
+}
+
+.skillUnorderedList li {
+  font-size: 22px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #555;
+}
 

@@ -3,9 +3,9 @@ import styles from "../css/home.module.css";
 import { useSpring, animated, useTransition } from "react-spring";
 import {ReactTyped} from "react-typed";
 
-const EDUCATION = ["B.Tech: Punjab Engineering College (Deemed to be university), Chandigarh", "12th: Mother Teresa Vidyapeeth", "10th: DAV Public School, Malighat, Muzaffarpur"]
+const EDUCATION = ["B.Tech: Punjab Engineering College (Deemed to be university), Chandigarh", "12th: Mother Teresa Vidyapeeth, Muzaffarpur", "10th: DAV Public School, Malighat, Muzaffarpur"]
 const CONTACT = ["Email: varunvatsal963@gmail.com", "Mobile No: 6202347066"]
-
+const SKILLS = ["Javascript", "Java", "Reactjs", "Nodejs", "Spring", "Spring Boot","SQL", "MongoDB", "HTML", "CSS"]
 
 const Home = () => {
   const [profileImageSpring, profileImageApi] = useSpring(() => ({
@@ -20,19 +20,30 @@ const Home = () => {
     leave: {opacity: 0, transform: "translateX(20px"},
     trail: 400,
     config: {
-      tension: 280, friction: 8
-    }
+      tension: 280, friction: 7
+    },
+    delay: 1800
   })
 
   const contactTransition = useTransition(CONTACT, {
     from: {opacity: 0, transform: "translateX(-20px)"},
     enter: {opacity: 1, transform: "translateX(0)"},
     leave: {opacity: 0, transform: "translateX(20px"},
-    trail: 250,
+    trail: 400,
     config: {
-      tension: 280, friction: 7
+      tension: 280, friction: 8
     },
-    delay: 1200
+    delay: 1000
+  })
+
+  const skillTransacion = useTransition(SKILLS, {
+    from: {opacity: 0, transform: "translateX(-20px)"},
+    enter: {opacity: 1, transform: "translateX(0)"},
+    leave: {opacity: 0, transform: "translateX(20px"},
+    trail: 100,
+    config: {
+      tension: 280, friction: 8
+    }
   })
 
   return (
@@ -72,10 +83,10 @@ const Home = () => {
       </div>
       <hr className={styles["fancy-line"]}/>
       <br />
-      <h1 className={styles.heading}>EDUCATION</h1>
-      <div className={styles.educationContainer}>
-        <ul className={styles.unorderedList}>
-          {educationTransitions((styles, item) => {
+      <h1 className={styles.heading}>SKILLS</h1>
+      <div className={styles.skillContainer}>
+        <ul className={styles.skillUnorderedList}>
+          {skillTransacion((styles, item) => {
             return (
               <animated.li style={{...styles}}>{item}</animated.li>
             )
@@ -93,6 +104,18 @@ const Home = () => {
               )
             })}
           </ul>
+      </div>
+      <hr className={styles["fancy-line"]}/>
+      <br />
+      <h1 className={styles.heading}>EDUCATION</h1>
+      <div className={styles.educationContainer}>
+        <ul className={styles.unorderedList}>
+          {educationTransitions((styles, item) => {
+            return (
+              <animated.li style={{...styles}}>{item}</animated.li>
+            )
+          })}
+        </ul>
       </div>
 
     </React.Fragment>
