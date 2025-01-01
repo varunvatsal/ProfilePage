@@ -6,13 +6,13 @@ import Home from './components/Home'
 import ProjectList from './components/ProjectList'
 import InvalidURL from './components/InvalidURL'
 import Description from './components/Description'
-
+import './app.css'
 
 const App = () => {
   return (
-    <>
+    <React.Fragment>
         <RouterProvider router={routing}/>
-    </>
+    </React.Fragment>
   )
 }
 

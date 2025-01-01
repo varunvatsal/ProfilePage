@@ -2,7 +2,7 @@ import React from 'react'
 
 const InvalidURL = () => {
   return (
-    <div>InvalidURL</div>
+    <React.Fragment>InvalidURL</React.Fragment>
   )
 }
 

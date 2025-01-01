@@ -1,57 +1,102 @@
-import React from 'react'
-import styles from '../css/home.module.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import styles from "../css/home.module.css";
+import { useSpring, animated, useTransition } from "react-spring";
+import {ReactTyped} from "react-typed";
+
+const EDUCATION = ["B.Tech: Punjab Engineering College (Deemed to be university), Chandigarh", "12th: Mother Teresa Vidyapeeth", "10th: DAV Public School, Malighat, Muzaffarpur"]
+const CONTACT = ["Email: varunvatsal963@gmail.com", "Mobile No: 6202347066"]
+
+
 const Home = () => {
+  const [profileImageSpring, profileImageApi] = useSpring(() => ({
+    from: {opacity: 0, height: "100px", width: "100px"},
+    to: {opacity: 1, height: "250px", width: "250px"},
+    config: {duration: 700}
+  }))
+
+  const educationTransitions = useTransition(EDUCATION, {
+    from: {opacity: 0, transform: "translateX(-20px)"},
+    enter: {opacity: 1, transform: "translateX(0)"},
+    leave: {opacity: 0, transform: "translateX(20px"},
+    trail: 400,
+    config: {
+      tension: 280, friction: 8
+    }
+  })
+
+  const contactTransition = useTransition(CONTACT, {
+    from: {opacity: 0, transform: "translateX(-20px)"},
+    enter: {opacity: 1, transform: "translateX(0)"},
+    leave: {opacity: 0, transform: "translateX(20px"},
+    trail: 250,
+    config: {
+      tension: 280, friction: 7
+    },
+    delay: 1200
+  })
+
   return (
-    <div className={styles.profileContainer}>
-      <div className={styles.header}>
-        <img
-          src="https://raw.githubusercontent.com/varunvatsal/ProfilePage/refs/heads/main/images/Varun%20Vatsal.jpg"
-          alt="Profile Picture"
-          className={styles.profilePicture}
-        />
-        <div className={styles.basicInfo}>
-          <h1 className={styles.name}>Varun Vatsal</h1>
-          <p className={styles.description}>
-          Hi, I am Varun Vatsal, a graduate of Punjab Engineering College, Chandigarh, with a degree in Electronics and Communication Engineering. I am passionate about software development and enjoy creating innovative solutions while constantly learning and improving my skills. I have expertise in Java, Spring Boot, Spring, JavaScript, React, Node.js, SQL, HTML, and CSS, and I am dedicated to building impactful software and advancing my knowledge in this ever-evolving field, Please <b><Link to='/projects'>Click Me</Link></b> to go to projects tab.
-          </p>
-        </div>
+    <React.Fragment>
+        <div className={styles.profileContainer}>
+          <div className={styles.profileImageContainer}>
+            <animated.img
+              src="../../images/WhatsApp Image 2025-01-01 at 3.18.21 PM.jpeg"
+              alt="Profile"
+              className={styles.profileImage}
+              style={{...profileImageSpring, transformOrigin: "center"}}
+            />
+          </div>
+          <div className={styles.profileDescription}>
+            <h1>VARUN VATSAL</h1>
+            <h2>I am a{" "}
+              <ReactTyped
+                className={styles.profileTyper}
+                strings={["Software Developer", "Software Designer", "Problem Solver", "Thinker", "Freelancer", "Explorer", "Cook"]}
+                typeSpeed={100}
+                loop
+                backSpeed={20}
+                cursorChar=">"
+                showCursor={true}
+              />
+            </h2>
+            <p>
+            Hi, My name is Varun Vatsal, a graduate of Punjab Engineering College, Chandigarh, with a degree in Electronics and Communication Engineering.
+            </p>
+            <p>
+            I am passionate about software development and enjoy creating innovative solutions while constantly learning and improving my skills. I have expertise in Java, Spring Boot, Spring, JavaScript, React, Node.js, SQL, HTML, and CSS.
+            </p>
+            <p>
+            I am dedicated to building impactful software and advancing my knowledge in this ever-evolving field.
+            </p>
+          </div>
+      </div>
+      <hr className={styles["fancy-line"]}/>
+      <br />
+      <h1 className={styles.heading}>EDUCATION</h1>
+      <div className={styles.educationContainer}>
+        <ul className={styles.unorderedList}>
+          {educationTransitions((styles, item) => {
+            return (
+              <animated.li style={{...styles}}>{item}</animated.li>
+            )
+          })}
+        </ul>
+      </div>
+      <hr className={styles["fancy-line"]}/>
+      <br />
+      <h1 className={styles.heading}>CONTACT</h1>
+      <div className={styles.contactContainer}>
+          <ul className={styles.unorderedList}>
+            {contactTransition((styles, item) => {
+              return (
+                <animated.li style={{...styles}}>{item}</animated.li>
+              )
+            })}
+          </ul>
       </div>
 
-      <div className={styles.details}>
-        <h2 className={styles.sectionTitle}>Education History</h2>
-        <ul className={styles.educationList}>
-          <li>B.Tech: Punjab Engineering College (Deemed to be university), Chandigarh</li>
-          <li>12th: Mother Teresa Vidyapeeth</li>
-          <li>10th: DAV Public School, Malighat, Muzaffarpur</li>
-        </ul>
+    </React.Fragment>
+  );
+};
 
-        <h2 className={styles.sectionTitle}>Contact Details</h2>
-        <p>Email: varunvatsal963@gmail.com</p>
-        <p>Mobile No: +91-6202347066</p>
-
-        <h2 className={styles.sectionTitle}>Skills</h2>
-        <ul className={styles.list}>
-          <li>React.js</li>
-          <li>Node.js</li>
-          <li>Javascript</li>
-          <li>SQL</li>
-          <li>Java</li>
-          <li>Spring Boot</li>
-          <li>Spring</li>
-          <li>Data Structures & Algorithms</li>
-        </ul>
-
-        <h2 className={styles.sectionTitle}>Hobbies</h2>
-        <ul className={styles.list}>
-          <li>Reading</li>
-          <li>Cooking</li>
-          <li>Web Development</li>
-        </ul>
-
-      </div>
-    </div>
-  )
-}
-
-export default Home
+export default Home;

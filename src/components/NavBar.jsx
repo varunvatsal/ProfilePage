@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import style from '../css/navbar.module.css'
 const NavBar = () => {
   return (
-    <>
+    <React.Fragment>
         <nav className={style.navbar}>
             <div className={style["navbar-brand"]}>
                <h3>Profile Page</h3>
@@ -15,8 +15,7 @@ const NavBar = () => {
                 <li><Link to='https://github.com/varunvatsal' target='_blank'>Github</Link></li>
             </ul>
         </nav>
-        <br />
-    </>
+    </React.Fragment>
   )
 }
 

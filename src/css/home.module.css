@@ -1,75 +1,90 @@
 .profileContainer {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border: 3px solid transparent;
-    border-image: linear-gradient(to left, blue, lightblue);
-    border-radius: 10px;
-    border-image-slice: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .profilePicture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #007bff;
-  }
-  
-  .basicInfo {
-    flex: 1;
-  }
-  
-  .name {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #333;
-  }
-  
-  .description {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .details {
-    margin-top: 20px;
-  }
-  
-  .sectionTitle {
-    margin: 20px 0 10px;
-    font-size: 1.4rem;
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-  }
-  
-  .educationList,
-  .list {
-    list-style-type: disc;
-    margin: 10px 0 0 20px;
-    color: #333;
-    font-size: 1rem;
-  }
-  
-  .educationList li,
-  .list li {
-    margin-bottom: 5px;
-  }
-  
-  p {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #555;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileDescription {
+  max-width: 600px;
+}
+
+.profileDescription h1 {
+  margin: 0 0 10px;
+  color: #555;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.profileDescription h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.profileDescription p {
+  margin: 0;
+  font-size: 22px;
+  color: #555;
+}
+
+.profileImageContainer {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.profileTyper {
+  color: #2b28ec;
+}
+
+.heading {
+  font-size: 30px;
+  text-align: center;
+  color: #555;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fancy-line {
+  border-top: 2px solid #06288f;
+  border-top: 2px linear-gradient(to right, #200f90, #0d2c87) solid; 
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); 
+  margin: 0 auto; 
+  width: 50%;
+}
+
+.educationContainer {
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.unorderedList {
+  list-style-type: none;
+  display: inline-block;
+  text-align: left;
+}
+
+.unorderedList li{
+  font-size: 22px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #555;
+}
+
+.contactContainer {
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+
+

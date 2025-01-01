@@ -8,8 +8,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #333;
-    color: #fff;
+    background-image: linear-gradient(to bottom, #1843c2, #ffffff);
+    color: #043670;
   }
   
   .navbar-brand a {
@@ -17,7 +17,6 @@
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-    background-color: #333;
   }
   
   .navbar-links {
@@ -30,24 +29,22 @@
   
   .navbar-links li {
     display: inline;
-    background-color: #333;
   }
   
   .navbar-links a {
-    color: #fff;
+    color: #043670;
     text-decoration: none;
     font-size: 1.5rem;
     transition: color 0.3s;
   }
   
   .navbar-links a:hover {
-    color: #f0a500;
+    color: #ffffff;
   }
 
   .navbar-links button {
     border-radius: 6px;
     color: #fff;
-    background-color: #4a4e5d;
   }
 
   .navbar-links button:hover {
