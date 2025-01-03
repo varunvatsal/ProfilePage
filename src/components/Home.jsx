@@ -73,9 +73,11 @@ const Home = () => {
             <p>
             Hi, My name is Varun Vatsal, a graduate of Punjab Engineering College, Chandigarh, with a degree in Electronics and Communication Engineering.
             </p>
+            <br />
             <p>
             I am passionate about software development and enjoy creating innovative solutions while constantly learning and improving my skills. I have expertise in Java, Spring Boot, Spring, JavaScript, React, Node.js, SQL, HTML, and CSS.
             </p>
+            <br />
             <p>
             I am dedicated to building impactful software and advancing my knowledge in this ever-evolving field.
             </p>
